@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.service.TestTservice;
+import com.example.demo.fanxing.DemoService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +13,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class DemoApplicationTests {
 
     @Autowired
-    @Qualifier("testT2ServiceImpl")
-    TestTservice testTservice;
+    @Qualifier("demoStringServiceImpl")
+    DemoService<String> service;
 
     @Test
     public void contextLoads() {
-        testTservice.add("车天亮");
+        service.print("chetianliang");
     }
 
 }
